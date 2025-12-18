@@ -5,5 +5,9 @@
  * @returns {object} - returns the new object
  */
 export const pick = (obj, ...fields) => {
+    for (let [key, value] of Object.entries(obj)) {
+        [...fields].includes(key) ? '' : delete obj[key];
+    }
 
+    return obj;
 };
