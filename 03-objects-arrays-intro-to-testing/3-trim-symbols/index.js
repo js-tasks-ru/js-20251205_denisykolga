@@ -6,7 +6,7 @@
  */
 export function trimSymbols(string, size) {
 
-    if (size === 0 || string === '') return '';
+    if (size === 0) return '';
     if (size === undefined) return string;
 
     let result = '';
